@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  install_python:
+  download_python:
     docker:
       - image: circleci/ruby:2.6
     steps:
@@ -13,4 +13,4 @@ workflows:
   version: 2
   default:
     jobs:
-      - install_python
+      - download_python           
