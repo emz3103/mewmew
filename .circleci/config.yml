@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  install_python:
+    docker:
+      - image: circleci/ruby:2.6
+    steps:
+      - checkout
+      - run:
+          name: Install Python and dependencies to build page HTML
+          command: |
+           ls
+workflows:
+  version: 2
+  default:
+    jobs:
+      - install_python
